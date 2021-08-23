@@ -6,3 +6,4 @@
 tests/tmp
 tests/roles
 .idea
+.DS_store
