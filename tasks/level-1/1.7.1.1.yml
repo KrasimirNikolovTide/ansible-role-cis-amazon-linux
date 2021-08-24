@@ -13,7 +13,9 @@
     path: "/etc/update-motd.d/{{ item }}"
     state: absent
   with_items:
+    - 29-ecs-banner-begin
     - 30-banner
+    - 31-ecs-banner-finish
     - 50-amazon-linux-extras-news
     - 70-available-updates
   tags:
@@ -25,6 +27,7 @@
   copy:
     dest: "/etc/update-motd.d/99-banner"
     content: "{{ cis_local_login_warning_banner }}"
+    mode: '0755'
   tags:
     - level-1
     - 1.7.1.1
