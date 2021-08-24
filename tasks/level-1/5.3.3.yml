@@ -32,7 +32,7 @@
     - "5.3.3"
     - scored
 
-- name: 5.3.3 - Ensure password reuse is limited (/etc/pam.d/system-auth)
+- name: 5.3.3 - Ensure password reuse is limited (/etc/pam.d/system-auth)(pam_pwhistory)
   pamd:
     name: system-auth
     type: password
@@ -47,7 +47,7 @@
     - "5.3.3"
     - scored
 
-- name: 5.3.3 - Ensure password reuse is limited (/etc/pam.d/password-auth)
+- name: 5.3.3 - Ensure password reuse is limited (/etc/pam.d/password-auth)(pam_pwhistory)
   pamd:
     name: password-auth
     type: password
